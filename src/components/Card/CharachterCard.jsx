@@ -31,6 +31,7 @@ const HpCardInfo = styled.div`
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   object-fit: contain;
   padding-top: 1rem;
+  background-color: white;
   img {
     width: 300px;
     height: 300px;
@@ -47,7 +48,7 @@ const HpCardInfo = styled.div`
   }
 
   &:active {
-    background-color: #49c8b9;
+    background-color: #e1a667;
     p {
       color: white;
     }
