@@ -1,9 +1,17 @@
 import styled from "styled-components";
-export function CharachterCard({ hpInfo }) {
+import { shuffle } from "lodash";
+export function CharachterCard({ hpInfo, sethpInfo }) {
+  const shufflehpArray = () => {
+    sethpInfo(shuffle(hpInfo));
+  };
   return (
     <>
       {hpInfo.map((card) => (
-        <HpCardInfo className="hpCard" key={card.name}>
+        <HpCardInfo
+          className="hpCard"
+          key={card.name}
+          onClick={() => shufflehpArray()}
+        >
           <img src={card.image} />
           <p>{card.name}</p>
         </HpCardInfo>

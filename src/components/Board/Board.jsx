@@ -1,10 +1,10 @@
 import { CharachterCard } from "../Card/CharachterCard";
 import styled from "styled-components";
 
-export function Board({ hpInfo }) {
+export function Board({ hpInfo, sethpInfo }) {
   return (
     <GameBoard>
-      <CharachterCard hpInfo={hpInfo} />
+      <CharachterCard hpInfo={hpInfo} sethpInfo={sethpInfo} />
     </GameBoard>
   );
 }

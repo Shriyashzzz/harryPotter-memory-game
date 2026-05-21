@@ -31,7 +31,13 @@ function App() {
   if (loading) {
     return <Loading />;
   } else {
-    return <Board hpInfo={charachterinfo} />;
+    return (
+      <>
+        {" "}
+        <p> count</p>
+        <Board hpInfo={charachterinfo} sethpInfo={setCharachterInfo} />
+      </>
+    );
   }
 }
 
