@@ -19,7 +19,7 @@ async function callHpApi() {
     if (harryPotterCharInfo == null) {
       const response = await fetchCharachters();
       const data = await response.json();
-      harryPotterCharInfo = data.slice(0, 10);
+      harryPotterCharInfo = data.slice(0, 18);
       console.log("harryPotter array updated");
     }
   } catch (e) {

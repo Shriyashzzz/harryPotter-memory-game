@@ -2,8 +2,8 @@ import { use, useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
+import { Board } from "./components/Board/Board";
 import "./App.css";
-import { CharachterCard } from "./components/Card/CharachterCard";
 import { getCharachters } from "./api/fetchApi";
 import { Loading } from "./components/Loading/Loading";
 function App() {
@@ -31,7 +31,7 @@ function App() {
   if (loading) {
     return <Loading />;
   } else {
-    return <CharachterCard hpInfo={charachterinfo} />;
+    return <Board hpInfo={charachterinfo} />;
   }
 }
 
