@@ -32,6 +32,8 @@ const HpCardInfo = styled.div`
   object-fit: contain;
   padding: 1rem;
   background-color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
   img {
     width: 100%;
     height: 100%;
@@ -44,7 +46,8 @@ const HpCardInfo = styled.div`
   }
 
   &:hover {
-    box-shadow: 20px 20px 15px -3px rgba(0, 242, 255, 0.1);
+    box-shadow: 20px 20px 15px -3px rgba(8, 0, 255, 0.1);
+    transform: translate(3px, 3px);
   }
 
   &:active {
