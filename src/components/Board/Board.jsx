@@ -10,9 +10,10 @@ export function Board({ hpInfo, sethpInfo }) {
 }
 
 const GameBoard = styled.section`
-  height: 100%;
-  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
   display: grid;
+  padding: 2rem;
   gap: 1rem;
   row-gap: 4rem;
   column-gap: 4rem;

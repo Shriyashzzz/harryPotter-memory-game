@@ -23,24 +23,24 @@ export function CharachterCard({ hpInfo, sethpInfo }) {
 const HpCardInfo = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   gap: 1rem;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   object-fit: contain;
-  padding-top: 1rem;
+  padding: 1rem;
   background-color: white;
   img {
-    width: 300px;
-    height: 300px;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   p {
     font-size: 1.2rem;
     font-weight: 900;
-    padding-bottom: 5px;
+    margin: 0px;
   }
 
   &:hover {
