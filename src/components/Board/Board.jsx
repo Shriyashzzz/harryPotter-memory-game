@@ -1,10 +1,24 @@
 import { CharachterCard } from "../Card/CharachterCard";
 import styled from "styled-components";
 
-export function Board({ hpInfo, sethpInfo }) {
+export function Board({
+  hpInfo,
+  sethpInfo,
+  count,
+  setCount,
+  bestScore,
+  setBestScore,
+}) {
   return (
     <GameBoard>
-      <CharachterCard hpInfo={hpInfo} sethpInfo={sethpInfo} />
+      <CharachterCard
+        hpInfo={hpInfo}
+        sethpInfo={sethpInfo}
+        setCount={setCount}
+        count={count}
+        bestScore={bestScore}
+        setBestScore={setBestScore}
+      />
     </GameBoard>
   );
 }

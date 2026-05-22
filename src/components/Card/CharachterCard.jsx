@@ -1,8 +1,46 @@
 import styled from "styled-components";
 import { shuffle } from "lodash";
-export function CharachterCard({ hpInfo, sethpInfo }) {
+export function CharachterCard({
+  hpInfo,
+  sethpInfo,
+  count,
+  setCount,
+  bestScore,
+  setBestScore,
+}) {
   const shufflehpArray = () => {
-    sethpInfo(shuffle(hpInfo));
+    sethpInfo((hpInfo) => shuffle(hpInfo));
+  };
+  const resetCLicks = () => {
+    console.log(`before reset: `, hpInfo);
+    sethpInfo(hpInfo.map((card) => ({ ...card, clicked: false })));
+    setCount(0);
+    console.log(`after reset `, hpInfo);
+  };
+  const checkIfCLicked = (card, setCount) => {
+    if (!card.clicked) {
+      sethpInfo((hpInfo) =>
+        hpInfo.map((hpCard) => {
+          if (hpCard.name == card.name) {
+            return { ...hpCard, clicked: true };
+          } else {
+            return hpCard;
+          }
+        }),
+      );
+      setCount(count + 1);
+    } else {
+      checkIfBest(count);
+      resetCLicks();
+    }
+  };
+
+  // checks if the last count is greater than current best score, if yes replaces it
+
+  const checkIfBest = (currentCount) => {
+    if (currentCount > bestScore) {
+      setBestScore(currentCount);
+    }
   };
   return (
     <>
@@ -10,7 +48,11 @@ export function CharachterCard({ hpInfo, sethpInfo }) {
         <HpCardInfo
           className="hpCard"
           key={card.name}
-          onClick={() => shufflehpArray()}
+          onClick={(e) => {
+            checkIfCLicked(card, setCount);
+
+            shufflehpArray();
+          }}
         >
           <img src={card.image} />
           <p>{card.name}</p>

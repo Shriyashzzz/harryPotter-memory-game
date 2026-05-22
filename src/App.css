@@ -1,5 +1,24 @@
+@font-face {
+  font-family: "Parry Hotter";
+  src:
+    url("./assets/fonts/ParryHotter.woff2") format("woff2"),
+    url("./assets/fonts/ParryHotter.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
-  background-color: beige;
+  background-color: rgb(157, 159, 119);
   height: 100dvh;
   width: 100dvw;
+  font-family: cursive, "Times New Roman", Times, serif;
+  letter-spacing: 1.5px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

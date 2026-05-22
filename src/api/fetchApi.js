@@ -37,7 +37,11 @@ export async function getCharachters() {
       throw new Error("no  charahcter data available");
     } else {
       return harryPotterCharInfo.map((charachter) => {
-        return { name: charachter.name, image: charachter.image };
+        return {
+          name: charachter.name,
+          image: charachter.image,
+          clicked: false,
+        };
       });
     }
   } catch (error) {
