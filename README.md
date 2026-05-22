@@ -108,7 +108,7 @@ This project helped strengthen my understanding of:
 - React component architecture
 - State management with Hooks
 - Event handling and props
-- Array shuffling logic
+- Importance of keys for dynamic lists that needs to be shown on the UI.
 - Conditional rendering
 - Responsive UI design
 - Managing game state in React
