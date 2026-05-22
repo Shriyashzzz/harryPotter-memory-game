@@ -13,7 +13,11 @@ export default function Footer() {
             </g>
           </svg>
         </div>
-        <a className="footer-link" href="" target="_blank">
+        <a
+          className="footer-link"
+          href="https://github.com/Shriyashzzz/harryPotter-memory-game"
+          target="_blank"
+        >
           <img src={githubIcon} alt="github icon" className="icons github" />
           <p>Shriyashzzz</p>
         </a>
