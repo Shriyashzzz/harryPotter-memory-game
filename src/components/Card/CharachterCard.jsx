@@ -89,6 +89,7 @@ const HpCardInfo = styled.div`
     font-size: 1.2rem;
     font-weight: 900;
     margin: 0px;
+    text-align: center;
   }
 
   &:hover {
