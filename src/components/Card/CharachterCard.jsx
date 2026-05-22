@@ -75,6 +75,7 @@ const HpCardInfo = styled.div`
   padding: 1rem;
   background-color: white;
   cursor: pointer;
+  animation: cardPopIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   transition:
     transform 0.15s ease-out,
     box-shadow 0.15s ease-out,
@@ -118,6 +119,18 @@ const HpCardInfo = styled.div`
     }
     to {
       transform: scale(0.8);
+    }
+  }
+
+  /* ADD THIS TO YOUR @KEYFRAMES SECTION */
+  @keyframes cardPopIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8) translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
     }
   }
 `;
