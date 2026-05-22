@@ -75,7 +75,10 @@ const HpCardInfo = styled.div`
   padding: 1rem;
   background-color: white;
   cursor: pointer;
-  transition: transform 0.2s ease-out;
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out,
+    background-color 0.3s ease-out;
   img {
     width: 100%;
     height: 100%;
@@ -96,6 +99,25 @@ const HpCardInfo = styled.div`
     background-color: #e1a667;
     p {
       color: white;
+    }
+  }
+
+  @media screen and (max-width: 665px) {
+    &:active {
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      animation: clickFade 2s 1s ease-in backwards;
+      p {
+        color: white;
+      }
+    }
+  }
+
+  @keyframes clickFade {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0.8);
     }
   }
 `;
