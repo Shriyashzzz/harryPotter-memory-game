@@ -7,7 +7,7 @@ A fast-paced memory card game built with React where the objective is simple: cl
 ## Live Demo
 
 Play the game here:  
-[Harry Potter Memory Game](https://shriyashzzz.github.io/harryPotter-memory-game/)
+[Harry Potter Memory Game](https://harry-potter-memory-game-o0fi1jzv9-shriyashzzzs-projects.vercel.app/)
 
 ---
 
