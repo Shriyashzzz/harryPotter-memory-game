@@ -21,7 +21,6 @@
 
 /* Base link styles shared across the entire footer */
 .footer a {
-  text-decoration: none;
   color: rgb(91, 86, 86);
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
   transition: 0.2s all ease-in-out;
@@ -33,7 +32,7 @@
    ========================================================================== */
 .stackUsed,
 .sourceCredit {
-  flex: 1; /* Occupies equal spacing on left and right sides */
+  flex: 1;
 }
 
 .footer-link {

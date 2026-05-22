@@ -57,6 +57,8 @@ const Head = styled.header`
       display: flex;
       flex-direction: column;
       .gameName {
+        font-size: 1.5rem;
+        color: #6c5252;
         padding: 0px;
         margin: 0px;
       }
