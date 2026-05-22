@@ -1,12 +1,10 @@
 import { use, useEffect, useState, useRef } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
 import { Board } from "./components/Board/Board";
 import "./App.css";
 import { getCharachters } from "./api/fetchApi";
 import { Loading } from "./components/Loading/Loading";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 function App() {
   const [charachterinfo, setCharachterInfo] = useState(null);
   const [error, setError] = useState(null);
@@ -58,6 +56,7 @@ function App() {
           setBestScore={setBestScore}
           bestScore={bestScore}
         />
+        <Footer />
       </>
     );
   }

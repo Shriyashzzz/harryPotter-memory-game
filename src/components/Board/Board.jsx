@@ -27,7 +27,7 @@ const GameBoard = styled.section`
   max-height: 100%;
   max-width: 100%;
   display: grid;
-  padding: 2rem;
+  padding: 15px;
   gap: 1rem;
   row-gap: 4rem;
   column-gap: 4rem;

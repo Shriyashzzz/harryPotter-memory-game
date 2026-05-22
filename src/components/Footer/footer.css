@@ -1,0 +1,110 @@
+/* ==========================================================================
+   1. FOOTER CONTAINER
+   ========================================================================== */
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* box-sizing prevents width: 100% from blowing past screen edges due to padding */
+  box-sizing: border-box;
+  width: 100%;
+  height: fit-content;
+  padding: 0.75rem 1.5rem; /* Left/Right padding keeps things off screen walls */
+  margin-top: auto;
+
+  background-color: rgb(200, 194, 194);
+  color: white;
+  font-family: "Parry Hotter", "Times New Roman", Times, serif;
+  font-size: 0.8rem;
+}
+
+/* Base link styles shared across the entire footer */
+.footer a {
+  text-decoration: none;
+  color: rgb(91, 86, 86);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  transition: 0.2s all ease-in-out;
+}
+
+/* ==========================================================================
+   2. THREE-COLUMN LAYOUT SYSTEM
+   Giving left and right equal flex-basis forces center to be flawlessly centered.
+   ========================================================================== */
+.stackUsed,
+.sourceCredit {
+  flex: 1; /* Occupies equal spacing on left and right sides */
+}
+
+.footer-link {
+  flex: 0 0 auto; /* Stays exactly as wide as its content, perfectly centered */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+/* ==========================================================================
+   3. ITEM ALIGNMENT & STYLES
+   ========================================================================== */
+.stackUsed {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Pins text firmly to left wall */
+  gap: 1rem;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sourceCredit {
+  display: flex;
+  justify-content: flex-end; /* Pins links firmly to right wall */
+  gap: 2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sourceCredit a {
+  color: rgb(156, 71, 202);
+}
+
+/* GitHub SVG Icon Styling */
+.icons.github {
+  width: 2rem;
+  height: 2rem;
+  transition: 0.2s transform ease-out;
+  filter: invert(99%) sepia(1%) saturate(2975%) hue-rotate(190deg)
+    brightness(94%) contrast(108%);
+}
+
+/* HOVER ANIMATIONS */
+.footer-link:hover {
+  transform: scale(0.95);
+}
+
+.footer-link:hover .icons.github {
+  transform: rotate(360deg);
+}
+
+/* ==========================================================================
+   4. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media screen and (max-width: 722px) {
+  /* On small screens, transition to a clean, centered vertical stack */
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+
+  .stackUsed,
+  .sourceCredit {
+    flex: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .sourceCredit {
+    gap: 1.5rem; /* Reduced gap so it looks compact when columns align */
+  }
+}

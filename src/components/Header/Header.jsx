@@ -5,8 +5,8 @@ export default function Header({ count, bestScore }) {
       <div className="headerContainer">
         <h1 className="gameName">Harry Potter Memory Game</h1>
         <div className="scoreContainer">
-          <h3>Count: {count}</h3>
-          <h3> Best Score: {bestScore}</h3>
+          <h3>Count: 📝 {count}</h3>
+          <h3> Best Score: 🏆 {bestScore}</h3>
         </div>
       </div>
       <h2>
@@ -24,6 +24,7 @@ const Head = styled.header`
   align-items: center;
   h3,
   h2 {
+    font-size: 1.5rem;
     margin: 0px;
     text-align: center;
   }
